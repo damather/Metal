@@ -19,13 +19,13 @@ You should be able to:
 
 ## Running the app
 
-Flows are triggered via `POST /flow/{holdingidentityshorthash}` and flow result will need to be view at `GET /flow/{holdingidentityshorthash}/{clientrequestid}`
+Trigger flows using `POST /flow/{holdingidentityshorthash}` and view results at `GET /flow/{holdingidentityshorthash}/{clientrequestid}`
 * holdingidentityshorthash: the id of the network participants, ie Bob, Alice, Charlie. You can view all the short hashes of the network member with another gradle task called `ListVNodes`
-* clientrequestid: the id you specify in the flow requestBody when you trigger a flow.
+* clientrequestid: the id you specify in the flow requestBody when the flow was triggered.
 
 
 ## Step 1: Create Metal State
-Pick a VNode identity, and get its short hash. (Let's pick Alice.).
+Choose a VNode identity, and get its short hash. (Let's pick Alice.).
 
 Go to `POST /flow/{holdingidentityshorthash}`, enter the identity short hash(Alice's hash) and request body:
 ```
@@ -40,7 +40,7 @@ Go to `POST /flow/{holdingidentityshorthash}`, enter the identity short hash(Ali
 }
 ```
 
-After trigger the IssueMetalTokensFlow flow, hop to `GET /flow/{holdingidentityshorthash}/{clientrequestid}` and enter the short hash(Alice's hash) and clientrequestid to view the flow result
+Upon triggering the IssueMetalTokensFlow flow, go to `GET /flow/{holdingidentityshorthash}/{clientrequestid}` and enter the short hash(Alice's hash) and clientrequestid to view the flow result
 
 
 ## Step 2: List the metal state
@@ -52,7 +52,7 @@ Go to `POST /flow/{holdingidentityshorthash}`, enter the identity short hash(Bob
     "requestBody": {}
 }
 ```
-After trigger the ListMetalTokens flow, again, we need to hop to `GET /flow/{holdingidentityshorthash}/{clientrequestid}`
+Upon triggering the ListMetalTokens flow, again, we need to hop to `GET /flow/{holdingidentityshorthash}/{clientrequestid}`
 and check the result.
 
 
