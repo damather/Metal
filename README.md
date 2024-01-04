@@ -1,4 +1,4 @@
-##  Tokens app
+##  Metal app
 
 This app will mint and transfer metal tokens.
 
