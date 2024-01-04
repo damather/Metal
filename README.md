@@ -2,7 +2,7 @@
 
 This app will mint and transfer metal tokens.
 
-You should be able to:
+You can:
 1. Write a flow to Create a Metal Asset and its State on the Ledger. `IssueMetalTokensFlow`
 2. List metal entries. `ListMetalTokens`
 3. Claim and transfer the tokens to another member. `TransferMetalTokenFlow`
